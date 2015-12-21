@@ -1,5 +1,9 @@
 module FirstOrderLogic
 
-# package code goes here
+using Reexport
+
+include("unicode.jl")
+include("propositional.jl")
+
 
 end # module
