@@ -1,6 +1,6 @@
 @reexport module LogicBase
 
-export ¬, ∧, ∨, ⊻, ⇒, ⇔
+export ¬, ∧, ∨, ⊻, ⇒, ⇔, ⋁, ⋀
 
 """
     ¬(x::Bool) → Bool
@@ -50,5 +50,19 @@ A logical "if and only if". Return `true` if the first argument is the same as
 the second argument.
 """
 ⇔(x::Bool, y::Bool) = x ≡ y
+
+"""
+    ⋁(xs) → Bool
+
+Return `true` if at least one of the `xs` is true.
+"""
+⋁ = any
+
+"""
+    ⋀(xs) → Bool
+
+Return `true` if all of the `xs` are true.
+"""
+⋀ = all
 
 end  # module
